@@ -11,7 +11,7 @@ log_file: str = 'logs.fux'
 poke_interval: float = 5  # secs
 
 # Todo: Add up/down keyboard action (surfing commands)
-
+# Todo: When adding nonsense websites, other pokes get fucked as well!
 
 def save_targets() -> None:
     targets_file = None
@@ -144,7 +144,30 @@ def execute_command(operation, params) -> None:
                 print(f'interval {params[0]} is not valid cause it must be a positive floating point number!')
         else:
             print('Wrong command! Correct format: interval {positive number}')
-
+    elif operation == 'help':
+        print('''* add domain1 [domain2 domain3 ...]
+    Adds and saves the list of domains provided, to the poke list.
+    * Note: writing 'http://' or 'https://' is optional. 
+* del domain1 [domain2 domain3 ...]
+    Deletes them
+* interval [number]
+    Changes the poking interval to your desired time in seconds. If i remember correctly,
+    glith will consider an app as inative, if it doesnt have any api interaction within 5 minutes.
+    So set your interval below that, if you want your site to never go to sleep.
+    * Note: glitch has another limitation. all your projects can be active nearly 1000 hours a month.
+        Consider this in your interval value too.
+* cutoff [value]
+    cutoff value, is an integer value, which determines how many characters of the get request response, should be logged.
+    After that the text will be trunctuated.(...)
+* fuckoff
+    The app will shutdown after the next interval.
+* $ [command index]
+    executes previous commands.
+    index > 0: execute the (index)th command from all commands, that has been executed so far; starting from the app execution.
+    index < 0: execute the latest commands. for example $ -1 will execute previous command.
+''')
+        
+        
 def command_line() -> None:
     global time_to_exit
     commands: list = []
