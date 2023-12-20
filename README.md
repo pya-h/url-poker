@@ -1,6 +1,7 @@
 # Poker App
 # Language: Python
-Simple poker app for glitch. As you know the glitch provides free hosting for node.js/python/etc.
+Simple poker app for glitch. As you know glitch.com provides free hosting for node.js/python/etc.
+
 But it sends apps that aren't active a while to sleep. So next time you try to access your web app, it may take a while, 
 or if it has some scheduling and stuff like that, it will encounter with some problems.
 
