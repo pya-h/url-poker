@@ -40,3 +40,5 @@ It also has a command line, so that you can edit the list of the domains you wan
     executes previous commands.
     index > 0: execute the (index)th command from all commands, that has been executed so far; starting from the app execution.
     index < 0: execute the latest commands. for example $ -1 will execute previous command.
+* help
+    Obvious! Prints the Command-Line Help
