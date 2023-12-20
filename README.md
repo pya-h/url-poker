@@ -18,7 +18,7 @@ It also has a command line, so that you can edit the list of the domains you wan
 * interval change, cutoff(truncuate) level change.
 * All operations are implemented asynchronous-ly.
 * Its obvious That this app can be used for services other services with glitch-like limitations too.
-
+* Api Logs will be reset after the file log exceeds 16 MB. In order to prevent unnecessary data load; [for when the app is running on a host.]
 # Command-Line Help:
 * add domain1 [domain2 domain3 ...]
     Adds and saves the list of domains provided, to the poke list.
